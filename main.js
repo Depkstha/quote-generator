@@ -20,14 +20,23 @@ const getQuote = async () => {
   }
 };
 
+const generateTwitterShareUrl = (data) => {
+  const twitterBaseUrl = new URL("https://twitter.com/intent/tweet");
+  const params = new URLSearchParams(twitterBaseUrl.search);
+  params.append("text", data);
+  twitterBaseUrl.search = params.toString();
+  return twitterBaseUrl.toString();
+};
+
 const showQuote = async () => {
   const quote = await getQuote();
   if (!quote) return;
 
-  console.log(quote);
-
   quoteContainer.innerText = `"${quote.content}"`;
   authorContainer.innerText = `- ${quote.author}`;
+  tweetQuote.href = generateTwitterShareUrl(quote.content);
+  console.log(generateTwitterShareUrl(quote.content));
+  
 };
 
 showQuote();
