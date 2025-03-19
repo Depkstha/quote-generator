@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 class="header-title">Random Quote Generator</h1>
+
+    <div class="card">
+      <div class="quote-text"></div>
+      <span class="author"></span>
+    </div>
+
+    <div class="button-group">
+      <button class="btn btn-primary" id="new-quote"><i class="bi bi-arrow-counterclockwise"></i> New Quote</button>
+      <button class="btn btn-secondary" id="copy-quote"><i class="bi bi-clipboard2-check"></i> Copy Quote</button>
+      <a href="_blank" href="https://twitter.com/intent/tweet?text=I just published an article on how you can share a content to Twitter from client website"
+      data-size="large" class="btn btn-primary twitter-share-button" id="tweet-quote"><i class="bi bi-twitter-x"></i> Share</a>
+      <button class="btn btn-secondary" id="export-quote"><i class="bi bi-folder-symlink"></i> Export</button>
+    </div>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
