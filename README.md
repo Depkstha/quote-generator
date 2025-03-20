@@ -1,6 +1,6 @@
 # Random Quote Generator
 
-This project allow users to generate radom quote giving different features like fetching new quote, copy to clipboard, share on twitter and export quote card and image in device;
+This project allows users to generate random quotes with various features like fetching new quotes, copying to clipboard, sharing on Twitter, and exporting quote cards as images.
 
 ## Table of Contents
 
@@ -10,8 +10,8 @@ This project allow users to generate radom quote giving different features like 
   - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Note](#note)
+  - [Preview](#preview)
+  - [Acknowledgement](#acknowledgement)
 
 ## Deployment
 
@@ -21,7 +21,10 @@ This project allow users to generate radom quote giving different features like 
 
 - **Responsive Design**: The project adjusts its layout based on the screen size, ensuring a great user experience on both desktop and mobile devices.
 - **Modern UI**: Clean and visually appealing design using the Poppins font.
-- **Interactive Elements**: Users can interact through different mood emoji.
+- **Interactive Elements**: Users can interact through buttons to perform different actions.
+- **Quote Sharing**: Users can share quotes on different platforms.
+- **Copy to Clipboard**: Allows users to copy the quote text easily.
+- **Export as Image**: Uses the html2canvas.js plugin to save quotes as images.
 
 ## Technologies Used
 
@@ -44,16 +47,11 @@ This project allow users to generate radom quote giving different features like 
 
 3. Open `index.html` in your web browser to view the project.
 
-## Usage
-
-- The quote generator can generate random quote and user can share it in different platform.
-
-## This is what it looks like
-![Quote Generator Screenshot](assets/screenshots/01.jpeg)
+## Preview
+This is what it looks like
+![Quote Generator Screenshot](assets/screenshots/01.png)
 ![Quote Generator Screenshot](assets/screenshots/02.jpeg)
-![Quote Generator Screenshot](assets/screenshots/03.jpeg)
-![Quote Generator Screenshot](assets/screenshots/04.jpeg)
-![Quote Generator Screenshot](assets/screenshots/05.jpeg)
+![Quote Generator Screenshot](assets/screenshots/quote.png)
 
-## Note
-This project is part of the fulfillment of an assignment provided by Cohort on Masterji. Thank you Hitesh sir, Piyush sir, TA's and entire team for running such wonderful cohort successfully. I am very happy that I can be part of it. Love and support from Nepal.
+## Acknowledgement
+This project is part of the fulfillment of an assignment provided by Cohort on Masterji. Thank you Hitesh sir, Piyush sir, TAs, and the entire team for running such a wonderful cohort successfully. I am very happy to be part of it. Love and support from Nepal.
