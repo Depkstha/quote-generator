@@ -97,6 +97,16 @@ body {
   color: #1f2937;
 }
 
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
 .btn:hover {
   opacity: 0.9;
   transform: translateY(-1px);

@@ -4,14 +4,11 @@ const newQuoteBtn = document.getElementById("new-quote");
 const copyQuoteBtn = document.getElementById("copy-quote");
 const tweetQuoteBtn = document.getElementById("tweet-quote");
 const exportQuoteBtn = document.getElementById("export-quote");
-const card = document.querySelector(".card");
-// const canvas = document.getElementById("canvas");
-// const ctx = canvas.getContext("2d");
 
 const BACKGROUNDS = [
-  "https://img.freepik.com/free-photo/bubbles-green-red-yellow-color-forming-wet-background_23-2147876075.jpg?t=st=1742425901~exp=1742429501~hmac=a85e89487981b5793237acdeab6dac339ea3dc1af9c7b115f41c48937637b9cb&w=1380",
-  "https://img.freepik.com/free-photo/evergreen-falling-into-water_23-2148151513.jpg?t=st=1742426016~exp=1742429616~hmac=e2e477557de5d5b558a4d936f5c7d4f086c1465835402a49947a616ffb79f1a5&w=1380",
-  "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?t=st=1742425602~exp=1742429202~hmac=35ba9be33a2b8fc1711a21bc2f21a620ab0f8708105dff27a8414731b519236d&w=1380",
+  "./assets/bg/01.png",
+  "./assets/bg/02.png",
+  "./assets/bg/03.png",
 ];
 
 const changeRandomBackground = () => {
@@ -68,7 +65,10 @@ newQuoteBtn.addEventListener("click", (event) => {
 const copyToClipboard = (newClip) => {
   navigator.clipboard.writeText(newClip).then(
     () => {
-      console.log("Copied to clipboard");
+      copyQuoteBtn.innerHTML = '<i class="bi bi-clipboard-check"></i> Copied';
+      setTimeout(() => {
+        copyQuoteBtn.innerHTML = '<i class="bi bi-clipboard"></i> Copy Quote';
+      }, 3000);
     },
     (error) => {
       console.log(error);
@@ -87,13 +87,20 @@ copyQuoteBtn.addEventListener("click", () => {
   });
 });
 
-const exportQuoteImage = () => {
-  const canvasUrl = canvas.toDataURL();
-  const aEl = document.createElement("a");
-  aEl.href = canvasUrl;
-  aEl.download = "quote";
-  aEl.click();
-  aEl.remove();
+const exportQuoteImage = () => {  
+  const cardElement = document.querySelector(".card");
+
+  html2canvas(cardElement).then((canvas) => {
+    const imageData = canvas.toDataURL("image/png");
+
+    const aEl = document.createElement("a");
+    aEl.href = imageData;
+    aEl.download = "quote.png";
+    aEl.click();
+    aEl.remove();
+  }).catch((error) => {
+    console.error("Error generating image:", error);
+  });
 };
 
-exportQuoteBtn.addEventListener("click", () => exportQuoteImage);
+exportQuoteBtn.addEventListener("click", exportQuoteImage);
